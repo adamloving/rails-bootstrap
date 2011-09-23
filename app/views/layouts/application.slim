@@ -12,5 +12,12 @@ html
   body
     = render :partial => 'layouts/top_nav.html'
     #content
+      
       h1 Welcome
+      = link_to_rpx "Sign in", user_session_url
+      = javascript_include_rpx(user_session_url)
       == yield
+      
+      / http://localhost:3000/users/sign_in?authenticity_token=
+      
+      
