@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Rails Bootstrap
+    meta name="keywords" content="template language"
+    = stylesheet_link_tag 'http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css'
+    = stylesheet_link_tag 'main.css'
+
+    = javascript_include_tag 'jquery.1.6.2.min.js'
+    = javascript_include_tag 'app.js'
+        
+  body
+    = render :partial => 'layouts/top_nav.html'
+    #content
+      h1 Welcome
+      == yield
