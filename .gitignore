@@ -2,3 +2,5 @@
 db/*.sqlite3
 log/*.log
 tmp/**/*
+config/environments/development.rb 
+config/environments/production.rb
