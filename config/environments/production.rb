@@ -1,4 +1,6 @@
 RailsBootstrap::Application.configure do
+  RPXNow.api_key = "61e4b33a64f9a0de7ca258f136375e18b02be570" # see https://github.com/slainer68/devise_rpx_connectable
+  
   # Settings specified here will take precedence over those in config/environment.rb
 
   # The production environment is meant for finished, "live" apps.
