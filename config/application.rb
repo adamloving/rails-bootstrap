@@ -8,7 +8,7 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module RailsBootstrap
   class Application < Rails::Application
-    RPXNow.api_key = "hffmbdfjmcgkpfloohpn" # see https://github.com/slainer68/devise_rpx_connectable
+    # RPXNow.api_key = "..." # see https://github.com/slainer68/devise_rpx_connectable
     
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

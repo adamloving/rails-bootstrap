@@ -23,10 +23,11 @@ html
         p = link_to('Register', new_user_registration_path)
         = javascript_include_rpx(user_session_url)
       
-      
-      
       == yield
-      
-      / http://localhost:3000/users/sign_in?authenticity_token=
+    
+    
+    a#github(href="https://github.com/adamloving/rails-bootstrap")
+      span Fork me on GitHub!
+      span I ♥ Open Source
       
       

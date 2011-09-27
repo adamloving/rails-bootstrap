@@ -25,6 +25,12 @@ class User < ActiveRecord::Base
       # "email"=>nil, "username"=>"adamloving", "name"=>"Adam Loving", 
       # "verifiedEmail"=>nil, "url"=>"http://twitter.com/adamloving", 
       # "providerName"=>"Twitter", "photo"=>"http://a2.twimg.com/profile_images/1338178047/image_normal.jpg"}
+      
+      # Google
+      # {"identifier"=>"https://www.google.com/profiles/104417604089345244854", 
+      # "email"=>"adamloving@gmail.com", "username"=>"adamloving", "name"=>"adamloving", 
+      # "verifiedEmail"=>"******@gmail.com", "url"=>"https://www.google.com/profiles/104417604089345244854", 
+      # "providerName"=>"Google", "photo"=>nil}
 
       unless name.nil?
         self.first_name = name["givenName"]
@@ -35,6 +41,7 @@ class User < ActiveRecord::Base
 
   def on_before_rpx_auto_create(rpx_user)
     logger.info "before_rpx_auto_create"
+    # todo: find existing user?
   end
 
 end
