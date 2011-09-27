@@ -1,7 +1,6 @@
 # Use this hook to configure devise mailer, warden hooks and so forth. The first
 # four configuration values can also be set straight in your models.
 Devise.setup do |config|
-  config.rpx_application_name = "gambit" # instructions here: https://github.com/slainer68/devise_rpx_connectable
   
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -193,7 +192,7 @@ Devise.setup do |config|
   # config.navigational_formats = [:"*/*", "*/*", :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :delete
+  config.sign_out_via = :get # Adam changed from :delete, prob because not using rails.js to generate the post delete
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
@@ -209,4 +208,10 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
+
+  config.rpx_application_name = "gambit" # instructions here: https://github.com/slainer68/devise_rpx_connectable
+  config.rpx_auto_create_account = true # false if you don't want to create users automaticaly. True by default.
+  config.rpx_additional_user_data = [:verifiedEmail, :url, :providerName,:photo] # default [], get some extra profile info from RPXnow, default only a few fields are available in the rpx_user object (https://rpxnow.com/docs#profile_data)
+  config.rpx_extended_user_data = false # false by default, extended data only available for Plus and Pro RPX users (https://rpxnow.com/docs#api_auth_info)
+
 end

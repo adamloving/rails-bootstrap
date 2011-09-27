@@ -14,8 +14,17 @@ html
     #content
       
       h1 Welcome
-      = link_to_rpx "Sign in", user_session_url
-      = javascript_include_rpx(user_session_url)
+      
+      - if user_signed_in?
+        p = link_to('Edit registration', edit_user_registration_path)
+        p = link_to 'Sign out', destroy_user_session_path, :method => :delete
+      - else  
+        p = link_to_rpx "Sign in", user_session_url
+        p = link_to('Register', new_user_registration_path)
+        = javascript_include_rpx(user_session_url)
+      
+      
+      
       == yield
       
       / http://localhost:3000/users/sign_in?authenticity_token=
