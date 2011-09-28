@@ -6,7 +6,46 @@ body {
   #content {
     margin: 100px;
   }
+
+  &.launch {
+      margin: 0px;
+      background: black url(/images/launch-background.jpg) no-repeat top center fixed;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center top;
+      vertical-align: baseline;
+  }
+  
+  .launch-content {
+    min-height: 800px;
+    background: transparent;
+    vertical-align: baseline;
+
+    .launch-form {
+      color: #eee;
+      height: 280px;
+      width: 320px;
+      background-color: rgba(0,0,0,.95);
+      border-radius: 10px;
+      padding: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      vertical-align: baseline;
+      
+      h1, h2, h3 {
+        color: #eee;
+        text-align: center;
+      }      
+    }
+
+  }
+  
 }
+
+
+
+
 
 @import "compass";
 
