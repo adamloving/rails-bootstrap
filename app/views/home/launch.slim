@@ -2,8 +2,6 @@
   h1 Rails Bootstrap
   h3 Quick clean startup project
   br
-  i Launching soon. Enter your email to join our invite list:
-  br
   .alert-message.success style='margin-top: 10px; display:none'
     p
       strong Success! 
@@ -15,10 +13,31 @@
 
   br
   .form-elements style='text-align: center; margin-left: auto; margin-right:auto'
+    i Launching soon. Enter your email to join our invite list:
+    br
+    br
     input#email type='text' value='email@address.com' width='25'
     button.btn.success#signup style='margin-left: 12px' GO
+
+  .share-widgets style="display:none;height: 62px"
+    .share-column.facebook
+      #fb-root
+        script src="http://connect.facebook.net/en_US/all.js#appId=230597280321479&amp;xfbml=1"
+        fb:like href="" layout="box_count" width="55" show_faces="true" font=""
+
+    .share-column.twitter
+        a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" Tweet
+        script type="text/javascript" src="http://platform.twitter.com/widgets.js"
+
+    .share-column.linkedin
+        script src="http://platform.linkedin.com/in.js" type="text/javascript"
+        script type="IN/Share" data-counter="top"
+
+    .share-column.googleplus
+    		g:plusone size="tall" callback="afterPlus"
+    		script type="text/javascript"
+    		  | (function() {  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;  po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();
     
   br
-  br
-  .links style='text-align: center; margin-left: auto; margin-right:auto'
+  p.links style='clear: both;text-align: center; margin-top: 10px; margin-left: auto; margin-right:auto'
     a href="/home" Skip to the inside

@@ -18,7 +18,9 @@ class App
             this.onSignupSuccess(data)
     
   onSignupSuccess: (data) =>
-    $('.alert-message.success').fadeIn();
+    $('.form-elements').fadeOut()
+    $('.alert-message.success').fadeIn()
+    $('.share-widgets').fadeIn()
 
 jQuery ->  
   window.app = new App
