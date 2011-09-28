@@ -36,7 +36,13 @@ body {
       h1, h2, h3 {
         color: #eee;
         text-align: center;
-      }      
+      } 
+      
+      .share-column {
+        width: 80px;
+        float: left;
+        text-align: center;
+      }     
     }
 
   }
