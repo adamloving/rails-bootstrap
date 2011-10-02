@@ -12,17 +12,7 @@ html
   body
     = render :partial => 'layouts/top_nav.html'
     #content
-      
-      h1 Welcome
-      
-      - if user_signed_in?
-        p = link_to('Edit registration', edit_user_registration_path)
-        p = link_to 'Sign out', destroy_user_session_path, :method => :delete
-      - else  
-        p = link_to_rpx "Sign in", user_session_url
-        p = link_to('Register', new_user_registration_path)
-        = javascript_include_rpx(user_session_url)
-      
+            
       == yield
       / background photo from: http://www.flickr.com/photos/kassel1/4184845014/sizes/l/in/photostream/
     
