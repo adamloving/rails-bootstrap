@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :rpx_connectable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :remember_me
+  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :remember_me, :is_customer
 
   # http://webtempest.com/rails-3-easy-user-sign-upin-devise-with-rpx-janrain-via-rpx_connectable/
   def on_before_rpx_success(rpx_data)
@@ -42,6 +42,10 @@ class User < ActiveRecord::Base
   def on_before_rpx_auto_create(rpx_user)
     logger.info "before_rpx_auto_create"
     # todo: find existing user?
+  end
+
+  def get_access_link
+    Digest::MD5.base64digest(self.email)
   end
 
 end

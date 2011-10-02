@@ -52,6 +52,10 @@ RailsBootstrap::Application.routes.draw do
   # just remember to delete public/index.html.
   match 'signup' => "users#create"
   match 'home' => "home#index"
+  match 'product' => "product#show"
+  
+  match 'api/paypal', :to => 'api/paypal#create', :via => %w(post)
+  
   root :to => "home#launch"
 
   # See how all your routes lay out with "rake routes"
