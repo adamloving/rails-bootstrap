@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110927051353) do
+ActiveRecord::Schema.define(:version => 20111002025246) do
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20110927051353) do
     t.string   "rpx_identifier"
     t.string   "first_name"
     t.string   "last_name"
+    t.boolean  "is_customer"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
