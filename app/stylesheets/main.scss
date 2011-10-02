@@ -1,3 +1,5 @@
+@import "forkme";
+
 // use $ compass watch . to auto-compile
 body {
   padding-top: 40px;
@@ -5,110 +7,6 @@ body {
   
   #content {
     margin: 100px;
-  }
-
-  &.launch {
-      margin: 0px;
-      background: black url(/images/launch-background.jpg) no-repeat top center fixed;
-      -moz-background-size: cover;
-      -webkit-background-size: cover;
-      background-size: cover;
-      background-position: center top;
-      vertical-align: baseline;
-  }
-  
-  .launch-content {
-    min-height: 800px;
-    background: transparent;
-    vertical-align: baseline;
-
-    .launch-form {
-      color: #eee;
-      height: 280px;
-      width: 320px;
-      background-color: rgba(0,0,0,.95);
-      border-radius: 10px;
-      padding: 40px;
-      margin-left: auto;
-      margin-right: auto;
-      vertical-align: baseline;
-      
-      h1, h2, h3 {
-        color: #eee;
-        text-align: center;
-      } 
-      
-      .share-column {
-        width: 80px;
-        float: left;
-        text-align: center;
-      }     
-    }
-
-  }
-  
+  }  
 }
 
-
-
-
-
-@import "compass";
-
-#github {
-  right: -65px;
-  height: 30px;
-  bottom: 60px;
-  position: absolute;
-  text-decoration: none;
-  width: 250px;
-  @include rotate(-45deg);
-  span {
-    background: black;
-    color: white;
-    font-size: 14px;
-    left: 0;
-    padding: 5px 0;
-    position: absolute;
-    text-align: center;
-    width: 250px;
-    @include box-shadow(rgba(black, 0.2) 1px 1px 10px);
-    // If you’re using Compass < 0.11 use this:
-    // @include box-shadow(rgba(black, 0.2), 1px, 1px, 10px);
-    @include transition(opacity, 1s);
-    &:last-child {
-      /* this is the backside */
-      background: red;
-      opacity: 0;
-    }
-  }
-  :hover span {
-    &:first-child {
-      opacity: 0;
-    }
-    &:last-child {
-      opacity: 1;
-    }
-  }
-}
-
-@media all and (-webkit-transform-3d) {
-  #github {
-    span {
-      opacity: 1 !important;
-      -webkit-backface-visibility: hidden;
-      -webkit-transition: -webkit-transform 1s;
-      &:last-child {
-        -webkit-transform: rotateX(180deg);
-      }
-    }
-    &:hover span {
-      &:first-child {
-        -webkit-transform: rotateX(180deg);
-      }
-      &:last-child {
-        -webkit-transform: rotateX(360deg);
-      }
-    }
-  }
-}
