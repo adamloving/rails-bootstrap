@@ -53,6 +53,7 @@ RailsBootstrap::Application.routes.draw do
   match 'signup' => "users#create"
   match 'home' => "home#index"
   match 'product' => "product#show"
+  match 'mobile' => "home#mobile"
   
   match 'api/paypal', :to => 'api/paypal#create', :via => %w(post)
   

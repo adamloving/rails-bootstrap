@@ -1,0 +1,12 @@
+.event-button {
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+  border: solid 2px orange;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(2%, #dedede), color-stop(100%, #bababa));
+  margin: 4px;
+  padding: 4px;
+  text-align: center;
+  vertical-align: middle;
+}

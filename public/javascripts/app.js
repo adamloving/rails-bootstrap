@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Wed, 28 Sep 2011 06:49:21 GMT from
+/* DO NOT MODIFY. This file was compiled Thu, 06 Oct 2011 06:40:48 GMT from
  * /Users/adam/Projects/rails-bootstrap/app/coffeescripts/app.coffee
  */
 
