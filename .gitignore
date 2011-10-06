@@ -5,4 +5,3 @@ tmp/**/*
 config/environments/development.rb 
 config/environments/production.rb
 *.DS_STORE
-public/client/sencha
