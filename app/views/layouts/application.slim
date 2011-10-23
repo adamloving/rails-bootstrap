@@ -8,9 +8,10 @@ html
 
     = javascript_include_tag 'jquery.1.6.2.min.js'
     = javascript_include_tag 'app.js'
+    = javascript_include_tag 'bootstrap-dropdown.js'
         
   body
-    = render :partial => 'layouts/top_nav.html'
+    = render :partial => 'layouts/top_nav'
     #content
       == yield
       / background photo from: http://www.flickr.com/photos/kassel1/4184845014/sizes/l/in/photostream/
@@ -18,5 +19,3 @@ html
     a#github(href="https://github.com/adamloving/rails-bootstrap")
       span Fork me on GitHub!
       span I ♥ Open Source
-      
-      
