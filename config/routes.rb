@@ -46,8 +46,9 @@ RailsBootstrap::Application.routes.draw do
   #     resources :products
   #   end
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
+  devise_for :users, :controllers => { :omniauth_callbacks => "api/omniauth_callbacks" }
+  match 'auth/facebook/callback' => 'api/auth#facebook', :via => 'get'
+  
   root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"

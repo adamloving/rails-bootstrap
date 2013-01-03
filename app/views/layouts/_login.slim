@@ -1,0 +1,16 @@
+- if user_signed_in?
+  .container-fluid.pull-right
+    p.navbar-text
+      ' Welcome #{current_user.name} | 
+      
+      - if current_user.is_admin?
+        a href="/admin" Admin
+        '  | 
+      
+      a href="#{{destroy_user_session_path}}" Sign out
+
+- else
+  .container-fluid.pull-right style="padding-top: 2px"
+    .navbar-text
+      a href="#{{user_omniauth_authorize_path(:facebook)}}"
+        img src="/assets/fb-login-button.png"

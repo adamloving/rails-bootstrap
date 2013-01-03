@@ -20,5 +20,8 @@ gem 'jquery-rails'
 gem 'slim'
 gem 'twitter-bootstrap-rails'
 
+gem 'devise'
+gem 'omniauth-facebook'
+
 # To use debugger
 # gem 'debugger'
