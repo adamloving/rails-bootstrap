@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  devise :omniauthable
+  devise :database_authenticatable, :omniauthable
 
   attr_accessible :email
   attr_accessible :name
@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   attr_accessible :uid
   attr_accessible :photo_url
   attr_accessible :access_token
-  
+
   def User.find_for_facebook_oauth(auth, signed_in_resource = nil)
     Rails.logger.info "USER INFO #{auth.info}"
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
@@ -35,5 +35,10 @@ class User < ActiveRecord::Base
 
   def is_admin?
     false
+  end
+
+  def encrypted_password
+    # dummy to fake out :database_authenticatable.
+    # when I remove :database_authenticatable, some necessary routes (/users/sign_out) aren't generated.
   end
 end
