@@ -1,0 +1,1 @@
+foreman run rake test

@@ -1,0 +1,1 @@
+foreman run script/rails console
