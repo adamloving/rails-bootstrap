@@ -3,12 +3,12 @@ Rails Bootstrap
 
 Introduction
 ------------
-A step by step guide to set up a Rails web application (including the ability to take payments) in just an hour. This is intended to give you a fresh Web application with state of the art tools when you sit down at a StartupWeekend or hackathon. You definitely want to complete the prerequisites before the event begins.
+This project is will give you a fresh Web application with state of the art tools when you sit down at a StartupWeekend or hackathon. Below is a step by step guide to set up a Rails web application in just an hour. You definitely want to complete the prerequisites before the event begins.
 
 Prerequisites
 -------------
 * Install ruby (rvm is recommended)
-* Install rails (currently rails-bootstrap is running on Rails 3.0.0)
+* Install rails (currently rails-bootstrap is running on Rails 3.2.11)
 * Postgres or mysql is nice but not necessary, rails will default to sqlite
 * Install git http://help.github.com/mac-set-up-git/
 * Get set up to push/pull from github http://help.github.com/mac-set-up-git/
@@ -25,21 +25,19 @@ Start here if you are familiar with Rails, git, and Heroku.
 
 * Create a Heroku app https://devcenter.heroku.com/articles/rails3#deploy_to_herokucedar
 
-`$ heroku create
-$ get push heroku master`
+`$ heroku create`
+`$ git push heroku master`
 
 ### What you’ve got
 * Slim
 * Compass
-* Devise (and devise_rpx_connectable)
+* Devise
 * Twitter bootstrap
-* Coffeescript (Barista)
-* Sencha touch for HTML based mobile mockup.
-* Paypal payments handler
+* Coffeescript
+* Omniauth sign in with Facebook (easy to add Twitter or another OAuth provider)
 
 ### Customize your app
 * Rename (search and replace) “RailsBootstrap” to the name of your app.
-* Change the Janrain (RPX) sign in API Key. (search for RPXNow.api_key in application.rb)
 
 ### Continue to install
 * Create your database
@@ -48,10 +46,15 @@ $ get push heroku master`
 
 * Point your domain name at your heroku app https://devcenter.heroku.com/articles/custom-domains
 
-`heroku domains:add www.myapp.com
-heroku domains:add myapp.com`
+`heroku domains:add www.myapp.com`
+`heroku domains:add myapp.com`
 
 * add a CNAME record for myapp.heroku.com (and A records)
+* Create a Facebook app for login. Setup the app with your domain on Facebook.
+* add config variables for your Facebook App
+
+`$ heroku config:add FACEBOOK_APP_ID=1234`
+`$ heroku config:add FACEBOOK_SECRET=4567`
 
 Voila, within a few minutes you should be live.
 
