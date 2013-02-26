@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
 gem 'rails' #, :git => 'git://github.com/rails/rails.git'
 gem 'foreman'
 gem 'thin'
