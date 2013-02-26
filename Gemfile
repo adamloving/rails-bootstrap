@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'foreman'
 gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'thin'
 gem 'sqlite3'
 gem 'pg'
 
