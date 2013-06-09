@@ -20,6 +20,7 @@ gem 'twitter-bootstrap-rails'
 
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 
 # To use debugger
 # gem 'debugger'

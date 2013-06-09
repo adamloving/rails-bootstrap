@@ -48,6 +48,7 @@ RailsBootstrap::Application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "api/omniauth_callbacks" }
   match 'auth/facebook/callback' => 'api/auth#facebook', :via => 'get'
+  match 'auth/twitter/callback' => 'api/auth#twitter', :via => 'get'
   
   root :to => 'home#index'
 

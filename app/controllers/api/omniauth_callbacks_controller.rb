@@ -1,4 +1,5 @@
 class Api::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  
   def facebook
     Rails.logger.info ">>>>> #{request.env['omniauth.auth']['credentials']}"
     
@@ -21,4 +22,12 @@ class Api::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     redirect_to '/'
   end
+
+  def twitter
+    Rails.logger.info ">>>>> #{request.env['omniauth.auth']['credentials']}"
+    @user = User.find_for_facebook_oauth(request.env["omniauth.auth"], current_user)
+    sign_in @user
+    redirect_to '/'
+  end
+
 end

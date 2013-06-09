@@ -33,6 +33,33 @@ class User < ActiveRecord::Base
     user
   end
 
+  def self.find_for_twitter_oauth(auth, previous_user)
+    Rails.logger.info "-------- Omniauth Twitter Sign in --------"
+    Rails.logger.info auth.inspect
+    Rails.logger.info "-----------------------------"
+
+    user = User.where(:provider => auth.provider, :uid => auth.uid).first
+
+    if user
+      Rails.logger.info "UPDATING #{auth.info.image}"
+      user.name = auth.extra.raw_info.name
+      user.photo_url = auth.info.image
+      user.access_token = auth.credentials.token      
+      # user.oauth_secret: auth.credentials.secret      
+      user.save
+    else 
+      user = User.create!(
+        name: auth.extra.raw_info.name,
+        # url: auth.info.urls.Website,
+        photo_url: auth.info.image,
+        oauth_token: auth.credentials.token,
+        # oauth_secret: auth.credentials.secret      
+      )
+    end
+    
+    user    
+  end
+
   def is_admin?
     false
   end
