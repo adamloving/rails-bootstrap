@@ -1,16 +1,15 @@
 source 'https://rubygems.org'
 
 gem 'foreman'
-gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'thin'
+gem 'rails', '4.0.4'
 gem 'sqlite3'
 gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', :git => 'git://github.com/rails/sass-rails.git'
-  gem 'coffee-rails', :git => 'git://github.com/rails/coffee-rails.git'
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier', require: false
 end
 
@@ -23,3 +22,6 @@ gem 'omniauth-facebook'
 
 # To use debugger
 # gem 'debugger'
+
+# todo: deprecate attr_accessible
+gem 'protected_attributes'
