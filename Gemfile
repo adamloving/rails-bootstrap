@@ -5,6 +5,11 @@ gem 'rails', '4.0.4'
 gem 'sqlite3'
 gem 'pg'
 
+group :development do
+  gem 'unicorn'
+end
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -25,3 +30,7 @@ gem 'omniauth-facebook'
 
 # todo: deprecate attr_accessible
 gem 'protected_attributes'
+
+group :production do
+  gem 'rails_12factor' # for Heroku
+end
