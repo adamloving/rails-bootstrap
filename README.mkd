@@ -7,12 +7,12 @@ This project is will give you a fresh Web application with state of the art tool
 
 Prerequisites
 -------------
-* Install ruby (rvm is recommended)
-* Install rails (currently rails-bootstrap is running on Rails 3.2.11)
+* Install ruby (rbenv is recommended)
+* Install rails (currently rails-bootstrap is running on Rails 4.0.4)
 * Postgres or mysql is nice but not necessary, rails will default to sqlite
 * Install git http://help.github.com/mac-set-up-git/
 * Get set up to push/pull from github http://help.github.com/mac-set-up-git/
-* Setup for heroku https://devcenter.heroku.com/articles/rails3
+* [Get setup for heroku](https://devcenter.heroku.com/articles/getting-started-with-rails4)
 
 Steal the goodness
 ------------------
@@ -36,6 +36,17 @@ Start here if you are familiar with Rails, git, and Heroku.
 * Coffeescript
 * Omniauth sign in with Facebook (easy to add Twitter or another OAuth provider)
 
+### Get app running in Development environment (your laptop)
+
+    $ bundle install
+    $ rake db:migrate
+
+Create a .env file 
+
+
+    $ foreman start web
+
+
 ### Customize your app
 * Rename (search and replace) “RailsBootstrap” to the name of your app.
 
@@ -46,8 +57,8 @@ Start here if you are familiar with Rails, git, and Heroku.
 
 * Point your domain name at your heroku app https://devcenter.heroku.com/articles/custom-domains
 
-`heroku domains:add www.myapp.com`
-`heroku domains:add myapp.com`
+    $ heroku domains:add www.myapp.com
+    $ heroku domains:add myapp.com
 
 * add a CNAME record for myapp.heroku.com (and A records)
 * Create a Facebook app for login. Setup the app with your domain on Facebook.

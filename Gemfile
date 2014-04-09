@@ -1,17 +1,21 @@
 source 'https://rubygems.org'
 
-gem 'rails' #, :git => 'git://github.com/rails/rails.git'
 gem 'foreman'
-gem 'thin'
+gem 'rails', '4.0.4'
 gem 'sqlite3'
 gem 'pg'
+
+group :development do
+  gem 'unicorn'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
-  gem 'uglifier'
+  gem 'uglifier', require: false
 end
 
 gem 'jquery-rails'
@@ -24,3 +28,10 @@ gem 'omniauth-twitter'
 
 # To use debugger
 # gem 'debugger'
+
+# todo: deprecate attr_accessible
+gem 'protected_attributes'
+
+group :production do
+  gem 'rails_12factor' # for Heroku
+end
