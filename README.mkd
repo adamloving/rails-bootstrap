@@ -7,12 +7,12 @@ This project is will give you a fresh Web application with state of the art tool
 
 Prerequisites
 -------------
-* Install ruby (rvm is recommended)
-* Install rails (currently rails-bootstrap is running on Rails 3.2.11)
+* Install ruby (rbenv is recommended)
+* Install rails (currently rails-bootstrap is running on Rails 4.0.4)
 * Postgres or mysql is nice but not necessary, rails will default to sqlite
 * Install git http://help.github.com/mac-set-up-git/
 * Get set up to push/pull from github http://help.github.com/mac-set-up-git/
-* Setup for heroku https://devcenter.heroku.com/articles/rails3
+* [Get setup for heroku](https://devcenter.heroku.com/articles/getting-started-with-rails4)
 
 Steal the goodness
 ------------------
