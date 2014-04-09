@@ -2,10 +2,10 @@ source 'https://rubygems.org'
 
 gem 'foreman'
 gem 'rails', '4.0.4'
-gem 'sqlite3'
 gem 'pg'
 
 group :development do
+  gem 'sqlite3'
   gem 'unicorn'
 end
 
