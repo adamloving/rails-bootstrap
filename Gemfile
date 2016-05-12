@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'foreman'
 gem 'rails', '4.0.4'
-gem 'pg'
 
 group :development do
   gem 'sqlite3'
@@ -34,4 +32,6 @@ gem 'protected_attributes'
 
 group :production do
   gem 'rails_12factor' # for Heroku
+  # gem 'pg'
 end
+gem 'foreman'
