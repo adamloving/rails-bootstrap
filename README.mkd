@@ -7,12 +7,12 @@ This project is will give you a fresh Web application with state of the art tool
 
 Prerequisites
 -------------
-* Install ruby (rbenv is recommended)
-* Install rails (currently rails-bootstrap is running on Rails 4.0.4)
+* Install ruby ([rbenv](https://github.com/rbenv/rbenv#installation) is recommended) 
+* Install rails `gem install rails -v 4.1.8` (currently rails-bootstrap is running on Rails 4.1.8)
 * Postgres or mysql is nice but not necessary, rails will default to sqlite
-* Install git http://help.github.com/mac-set-up-git/
-* Get set up to push/pull from github http://help.github.com/mac-set-up-git/
-* [Get setup for heroku](https://devcenter.heroku.com/articles/getting-started-with-rails4)
+* [Install git](https://help.github.com/articles/set-up-git)
+* Get set up to [push/pull from github](http://help.github.com/mac-set-up-git)
+* [Get set up for heroku](https://devcenter.heroku.com/articles/getting-started-with-rails4) or [Elastic Beanstalk](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Ruby_rails.html)
 
 Steal the goodness
 ------------------
@@ -23,17 +23,23 @@ Start here if you are familiar with Rails, git, and Heroku.
 
 `$ git clone git@github.com:adamloving/rails-bootstrap.git myproject`
 
-* Create a Heroku app https://devcenter.heroku.com/articles/rails3#deploy_to_herokucedar
+* Run it locally
+
+    $ bundle install
+    $ export DEVISE_SECRET_KEY=biglonghexstring
+    $ rails server
+
+Note, you'll need to add your Facebook and Twitter app IDs to make sign in work.
+
+* Create a Heroku app
 
 `$ heroku create`
 `$ git push heroku master`
 
 ### What you’ve got
 * Slim
-* Compass
 * Devise
 * Twitter bootstrap
-* Coffeescript
 * Omniauth sign in with Facebook (easy to add Twitter or another OAuth provider)
 
 ### Get app running in Development environment (your laptop)
@@ -43,9 +49,7 @@ Start here if you are familiar with Rails, git, and Heroku.
 
 Create a .env file 
 
-
     $ foreman start web
-
 
 ### Customize your app
 * Rename (search and replace) “RailsBootstrap” to the name of your app.
