@@ -8,7 +8,15 @@ This project is will give you a fresh Web application with state of the art tool
 Prerequisites
 -------------
 * Install ruby ([rbenv](https://github.com/rbenv/rbenv#installation) is recommended) 
-* Install rails `gem install rails -v 4.1.8` (currently rails-bootstrap is running on Rails 4.1.8)
+  
+  brew install rbenv
+  rbenv init
+  rbenv install
+  gem install bundler
+  bundle
+
+If `bundle` is slow, comment out sections of the Gemfile, run `bundle` then uncomment out the dependencies.
+
 * Postgres or mysql is nice but not necessary, rails will default to sqlite
 * [Install git](https://help.github.com/articles/set-up-git)
 * Get set up to [push/pull from github](http://help.github.com/mac-set-up-git)

@@ -1,17 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.4'
-
-group :development do
-  gem 'sqlite3'
-  gem 'unicorn'
-end
-
+gem 'rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails'
+  gem 'sass-rails' # 2019: "Ruby Sass has reached end-of-life and should no longer be used."
   gem 'coffee-rails'
   gem 'uglifier', require: false
 end
@@ -24,14 +18,18 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 
-# To use debugger
-# gem 'debugger'
+# # To use debugger
+# # gem 'debugger'
 
-# todo: deprecate attr_accessible
-gem 'protected_attributes'
+gem 'foreman'
+
+group :development do
+  gem 'sqlite3'
+  gem 'unicorn'
+end
 
 group :production do
   gem 'rails_12factor' # for Heroku
   # gem 'pg'
 end
-gem 'foreman'
+

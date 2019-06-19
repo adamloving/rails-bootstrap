@@ -1,12 +1,5 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   devise :database_authenticatable, :omniauthable
-
-  attr_accessible :email
-  attr_accessible :name
-  attr_accessible :provider
-  attr_accessible :uid
-  attr_accessible :photo_url
-  attr_accessible :access_token
 
   def User.find_for_facebook_oauth(auth, signed_in_resource = nil)
     Rails.logger.info "USER INFO #{auth.info}"
